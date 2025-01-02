@@ -18,3 +18,19 @@
                 else : 
                     return False
         return True
+       # time complexity:O(N)
+       # space complexity:O(N)
+
+# Another way : using counter and set
+return len(word1) == len(word2) \
+            and set(word1) == set(word2) \
+            and Counter(Counter(word1).values()) == Counter(Counter(word2).values())
+
+# Another way : using counter
+if len(word1) != len(word2):
+            return False
+occurence1 = counter(word1) 
+occurence2 = counter(word2)
+
+return occurence1.keys() == occurence1.keys() /
+        and counter(occurence1.values()) == counter(occurence2.values())
