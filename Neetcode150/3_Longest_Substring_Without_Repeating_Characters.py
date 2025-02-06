@@ -24,3 +24,25 @@ def lengthOfLongestSubstring(self, strings: str) -> int:
 
 # time complexity : O(N)
 # space complexity :O(N)
+
+
+ def lengthOfLongestSubstring(self, strings: str) -> int:
+        # init
+        l , r = 0,0
+        max_len = 0
+        char_index = {}
+        
+        for s in strings:
+            # check if existed: update max_len and move l pointer
+            if char_index.get(s) != None and char_index[s] >= l:
+                max_len = max(max_len, r - l)
+                l = char_index[s] + 1
+
+            char_index[s] = r
+            r += 1
+        
+        max_len = max(max_len, r - l)
+        return max_len
+
+# time complexity : O(N)
+# space complexity :O(N)
