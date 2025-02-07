@@ -11,8 +11,8 @@
                 return False
             dict_s[st] -= 1
         return True
-# time complexity:O(N)
-# space complexity:O(N)
+# time complexity:O(N+M)
+# space complexity:O(1)
 
 
     def isAnagram(self, s: str, t: str) -> bool:
@@ -31,5 +31,5 @@
                 return False
         return True
 
-# time complexity:O(N)
-# space complexity:O(N)
+# time complexity:O(N+M)
+# space complexity:O(1)
