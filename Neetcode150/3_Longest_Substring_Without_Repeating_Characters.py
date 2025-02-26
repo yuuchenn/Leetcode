@@ -1,4 +1,23 @@
 def lengthOfLongestSubstring(self, strings: str) -> int:
+        l = 0
+        strSet = set()
+        maxLen = 0
+        for r in strings:
+            while s in strSet:
+                strSet.remove(s[r])
+                l += 1
+            strSet.add(s[r])
+            maxLen = max(maxLen, r-l+1)
+        return maxLen
+
+# time: O(N)
+# space: O(N)
+                
+
+
+
+
+def lengthOfLongestSubstring(self, strings: str) -> int:
         # init
         ans = {}
         max_len = lens = 0
